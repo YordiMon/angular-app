@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | Dan Aleko</title>
+  <link rel="stylesheet" href="register.component.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <form action="">
+      <h1>Regístrate</h1><br>
+      <p class="paragraph">Ingresa los datos necesarios con el formato requerido para crear una cuenta y navegar por la biblioteca virtual.</p>
+      <div *ngIf="isFormValid == false" class="error-message">
+        Porfavor asegurese de rellenar todos los campos con el formato correcto.
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Nombre de usuario" [(ngModel)]="registerObj.name" name="name">
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="email" placeholder="Correo electrónico" [(ngModel)]="registerObj.email" name="email">
+        <i class='bx bxs-envelope'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Contraseña" [(ngModel)]="registerObj.password" name="password">
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Dirección" [(ngModel)]="registerObj.address" name="address">
+        <i class='bx bxs-home'></i>
+      </div>
+      <button type="submit" class="btn" (click)="register()">Crear cuenta</button>
+      <div class="register-link">
+        <p>¿Ya tienes una cuenta? <a href="/">Iniciar sesión</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

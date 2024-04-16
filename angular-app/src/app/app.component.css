@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, black, rgb(0, 0, 68));
+    background-size: cover;
+    background-position: center;
+}
+
+app-header {
+    position: fixed;
+    width: 100%;
+}

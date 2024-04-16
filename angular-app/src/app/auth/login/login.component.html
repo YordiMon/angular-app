@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | Dan Aleko</title>
+  <link rel="stylesheet" href="login.component.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <form action="">
+      <h1>Inicia sesión</h1><br>
+      <p class="paragraph">Ingresa tus credenciales para poder entrar a la biblioteca virtual.</p>
+      <div *ngIf="isInvCred == true" class="error-message-invcred">
+        Usuario o contraseña incorrectas. Porfavor intentelo de nuevo.
+      </div>
+      <div *ngIf="isNameFilled == false" class="error-message">
+        ⬇ Este campo es obligatorio.
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Nombre de usuario" [(ngModel)]="loginObj.name" name="name">
+        <i class='bx bxs-user'></i>
+      </div>
+      <div *ngIf="isPasswordFilled == false" class="error-message">
+        ⬇ Este campo es obligatorio.
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Contraseña"  [(ngModel)]="loginObj.password" name="password">
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="remember-forgot">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+      </div>
+      <button type="button" class="btn" (click)="login()">Ingresar</button>
+      <div class="register-link">
+        <p>¿Eres usuario nuevo? <a href="register">Crear cuenta</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

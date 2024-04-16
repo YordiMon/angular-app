@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, black, rgb(0, 0, 68));
+    background-position: center;
+}
+
+.container-father {
+    display: flex;
+    padding-top: 130px;
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 100px;
+}
+
+.leftcol {
+    width: 100%;
+    margin-right: 100px;
+}
+
+.img {
+    width: 50px;
+    height: 65px;
+    border-radius: 5px;
+}
+
+.title {
+    margin-left: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    padding-top: 80px;
+}
+
+table {
+    margin-left: 10%;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: transparent;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid gray;
+}
+
+th {
+    background-color: transparent;
+    text-align: left;
+}
+
+.endproccess {
+    font-weight: 900;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.info {
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 40px;
+}
+
+.myx {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 8px;
+}
+
+.x {
+    font-size: 22px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.total {
+    font-size: 22px;
+    color: rgb(0, 255, 0);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.input{
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    transition: border-color 0.3s;
+  }
+
+  .input::placeholder{
+    color: gray;
+  }
+
+  .input:focus {
+    border-color: #0066ff;;
+  }
+
+  .buttons {
+    margin-top: 10px;
+  }
+
+  .cancel {
+    margin-top: 20px;
+    margin-right: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cancel:hover {
+    background-color: rgb(255, 62, 62);
+    font-size: 15px;
+}
+
+.buy {
+    margin-top: 20px;
+    margin-right: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(71, 71, 255);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buy:hover {
+    background-color: rgb(140, 140, 255);
+    font-size: 15px;
+}

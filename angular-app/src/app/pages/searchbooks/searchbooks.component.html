@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | Dan Aleko</title>
+  <link rel="stylesheet" href="searchbooks.component.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="input-box">
+        <input type="text" placeholder="Busca libros por su título" [(ngModel)]="this.searchObj.search" name="search" (input)="wichIsBeingUsed()">
+        <i class='bx bx-search'></i>
+    </div>
+
+    @if (isSearching == false) {
+        <div class="container-father">
+            @for(book of data; track book.id) {
+        
+                <div class="container">
+                    <div class="left-column">
+                        <img src="{{book.image}}">
+                    </div>
+                    <div class="right-column">
+                        <h1 class="title">{{ book.title }}</h1>
+                        <p class="information">Autor: {{ book.author }}</p>
+                        <p class="information">Género: {{ book.gender }}</p>
+                        <h1 class="price">${{ book.price }}</h1>
+                        <div class="buttons">
+                            <button class="btn1" (click)="addToCart(book)">
+                                <i class='bx bxs-cart-add' ></i>
+                            </button>
+                            <button class="btn2" (click)="bookDetail(book)" [routerLink]="['/bookdetail']">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+        
+            }
+            </div>
+    } @else if (isSearching == true) {
+        <div class="container-father">
+            @for(book of data; track book.id) {
+        
+                <div class="container">
+                    <div class="left-column">
+                        <img src="{{book.image}}">
+                    </div>
+                    <div class="right-column">
+                        <h1 class="title">{{ book.title }}</h1>
+                        <p class="information">Autor: {{ book.author }}</p>
+                        <p class="information">Género: {{ book.gender }}</p>
+                        <h1 class="price">${{ book.price }}</h1>
+                        <div class="buttons">
+                            <button class="btn1" (click)="addToCart(book)">
+                                <i class='bx bxs-cart-add' ></i>
+                            </button>
+                            <button class="btn2" (click)="bookDetail(book)" [routerLink]="['/bookdetail']">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+        
+            }
+            </div>
+    }
+</body>
+</html>

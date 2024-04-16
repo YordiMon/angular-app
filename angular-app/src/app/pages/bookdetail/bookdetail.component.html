@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | Dan Aleko</title>
+  <link rel="stylesheet" href="bookdetail.component.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="separate"></div>
+    <div class="container-father">
+        <div class="container">
+            <div class="left-column">
+                <img src="{{selectedBookImage}}" class="img">
+            </div>
+            <div class="right-column">
+                <p class="title">{{selectedBookTitle}}</p>
+                <p class="info-synopsis">Sinopsis:</p>
+                <p class="synopsis">{{selectedBookSynopsis}}</p>
+                <p class="info">Autor: {{selectedBookAuthor}}</p>
+                <p class="info">Género: {{selectedBookGenre}}</p>
+                <p class="price">A solo por ${{selectedBookPrice}}.00 dólares.</p>
+            </div>
+        </div>
+        
+        <p class="review">Deja tu reseña</p>
+        <p class="review-info">Si ya has comprado o leído este libro, puedes dejar una reseña compartiendo tu opinión. Esto ayuda a los demás lectores a decidirese si comprarlo o no.</p>
+        <div class="do-coment">
+            <input type="number" class="calificacion" placeholder="Calificación" min="1" max="5" [(ngModel)]="commentObj.ratings" name="rating">
+            <input type="text" placeholder="Deja tu opinion sobre este libro" [(ngModel)]="commentObj.comment" name="comment">
+            <button (click)="doReview()">Publicar</button>
+        </div>
+
+        @for(comment of data; track comment.id) {
+            <div class="container-comment">
+                <p class="user"><i class='bx bxs-user-circle' ></i> {{ comment.user_name }}</p>
+                <p class="rating">Calificación: {{ comment.ratings }} estrellas.</p>
+                <p class="comment">{{ comment.comment }}</p>
+            </div>
+        }
+    </div>
+    <div class="separate-final"></div>
+</body>
+</html>

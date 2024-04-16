@@ -1,0 +1,9 @@
+@if (!isPaginaEspecial1 && !isPaginaEspecial2 && !isPaginaEspecial3) {
+    <app-header></app-header>
+}
+
+<router-outlet></router-outlet>
+
+@if (!isPaginaEspecial1 && !isPaginaEspecial2) {
+    <app-footer></app-footer>
+}

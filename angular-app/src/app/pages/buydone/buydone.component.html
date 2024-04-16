@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="buydone.component.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <p class="title">¡ Compra finalizada !</p>
+        <p class="info">La compra ha sido realizada exitosamente, los productos especificados llegarán a la dirección concretada en cuanto antes. Recuerda tener el dinero es efectivo ya listo.</p>
+        
+        <p class="myx">Total a pagar:</p>
+        <p class="total">${{calculateTotal()}}.00 dólares</p>
+        <p class="myx">Dirección de entrega:</p>
+        <p class="x">{{newAddress}}</p>
+        <p class="myx">Pedido a nombre de:</p>
+        <p class="x">{{userName}}</p>
+    
+        <button (click)="home()" class="home">Volver a inicio</button>
+    </div>
+</body>
+</html>

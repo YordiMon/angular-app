@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="title-container">
+                <h1 class="title">Between Pages</h1>
+            </div>
+            <div class="buttons">
+                <button class="cart" [routerLink]="['/home']" title="Inicio">
+                    <i class='bx bxs-home'></i>
+                </button>
+                <button class="cart" [routerLink]="['/searchbooks']" title="Búsqueda">
+                    <i class='bx bx-search'></i>
+                </button>
+                <button class="cart" [routerLink]="['/cart']" title="Mi carrito">
+                    <i class='bx bxs-cart'></i>
+                </button>
+                <button class="logout" title="Cerrar sesión" [routerLink]="['/']" (click)="clearLocalStorage()">
+                    <i class='bx bx-log-out'></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="line"></div>
+</body>
+</html>
